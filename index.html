@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Rock Paper Scissors</title>
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+  <link rel="stylesheet" href="style.css">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #bfc5d1;
+    }
+    .jumbotron {
+      text-align: center;
+      background-color: aqua;
+    }
+    .scoring-board {
+    margin: 0px auto;
+    margin-top: 35px;
+    border: 3px solid black;
+    border-radius: 4px;
+    width: 200px;
+    font-size: 45px;
+    padding: 15px;
+    position: relative;
+    }
+    #user-label1 {
+      position: absolute;
+      top: 30px;
+      left: -150px;
+    }
+    #user-label2 {
+      position: absolute;
+      top: 30px;
+      right: -150px;
+    }
+    .result {
+      font-size: 40px;
+    }
+    .result, p {
+      text-align: center;
+    }
+    .choices {
+      margin: 50px 0;
+      text-align: center;
+    }
+    .choice {
+      border: 4px solid black;
+      border-radius: 50%;
+      margin: 0 20px;
+      padding: 10px;
+      display: inline-block;
+      transition: all 0.3s ease;
+    }
+    .choice:hover {
+      cursor: pointer;
+      background-color:#9e7c7c;
+    }
+  </style>
+</head>
+<body>
+  <div class="jumbotron">
+    <h1 class="display-4">Rock Paper Scissors | Multiplayer Game</h1>
+    <div class="scoring-board">
+      <div id="user-label1">User1</div>
+    <div id="user-label2">User2</div>
+    <span id="user1score">0</span> : <span id="user2score">0</span>
+    </div>
+  </div>
+  <div class="result">
+    <p>rock breaks scissors. you win!</p>
+  </div>
+  <div class="choices">
+    <div class="choice">
+      <img src="images/paper.png" alt="paper icon">
+    </div>
+    <div class="choice">
+      <img src="images/rock.png" alt="rock icon">
+    </div>
+    <div class="choice">
+      <img src="images/scissor.png" alt="scissors icon">
+    </div>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
