@@ -29,13 +29,13 @@
     }
     #user-label1 {
       position: absolute;
-      top: 30px;
-      left: -150px;
+      top: 10px;
+      left: -850px;
     }
     #user-label2 {
       position: absolute;
-      top: 30px;
-      right: -150px;
+      top: 10px;
+      right: -800px;
     }
     .result {
       font-size: 40px;
@@ -65,8 +65,20 @@
   <div class="jumbotron">
     <h1 class="display-4">Rock Paper Scissors | Multiplayer Game</h1>
     <div class="scoring-board">
-      <div id="user-label1">User1</div>
-    <div id="user-label2">User2</div>
+      <div id="user-label1">
+        <label for="user1name">Player One</label>
+        <input type="name" id="username1" placeholder="Type in a username" type="text">
+        <br>
+        <button class="button1" id="add-user1" type="submit">Submit</button>
+        <span id="user1-display"></span>
+      </div>
+    <div id="user-label2">
+      <label for="user2name">Player Two</label>
+        <input type="name" id="username2" placeholder="Type in a username" type="text">
+        <br>
+        <button class="button2" id="add-user2" type="submit">Submit</button>
+        <span id="user1-display"></span>
+    </div>
     <span id="user1score">0</span> : <span id="user2score">0</span>
     </div>
   </div>
@@ -74,17 +86,18 @@
     <p>rock breaks scissors. you win!</p>
   </div>
   <div class="choices">
-    <div class="choice">
+    <div class="choice" id="paper">
       <img src="images/paper.png" alt="paper icon">
     </div>
-    <div class="choice">
+    <div class="choice" id="rock">
       <img src="images/rock.png" alt="rock icon">
     </div>
-    <div class="choice">
+    <div class="choice" id="scissor">
       <img src="images/scissor.png" alt="scissors icon">
     </div>
   </div>
   <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+  <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="main.js"></script>
 </body>
 </html>
